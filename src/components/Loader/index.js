@@ -1,13 +1,13 @@
 import React from 'react'
 
-import image from '../../assets/loading.svg'
+import image from '../../assets/loader.gif'
 import './style.css'
 
 const Loader = () => {
 
   return (
     <div className='loading'>
-      <img src={image} width='100px' height='100px' alt="Loading data" />
+      <img src={image} alt="Loading data" />
     </div>
   )
 }

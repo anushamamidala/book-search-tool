@@ -12,6 +12,7 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(false)
 
   const handleSearch = async () => {
+    setIsLoading(true)
     const result = await axios(
       CONSTANTS.BOOKS_OPEN_API_SEARCH +
         '?q=' +
@@ -43,6 +44,8 @@ const Home = () => {
       setBooksList([...books])
     }
   }
+
+  console.log(isLoading,'----',booksList)
   return !isLoading ? (
     <div className='main-container'>
       <div className='search-container'>
@@ -60,7 +63,7 @@ const Home = () => {
           className='sort-select-drop'
           onChange={e => onChangeInSelect(e.target.value)}
         >
-          <option disabled selected>
+          <option disabled defaultValue>
             Select option
           </option>
           <option value='sortAscending'>

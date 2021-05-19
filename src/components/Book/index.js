@@ -21,6 +21,7 @@ const Book = ({ booksList }) => {
               ) : (
                 <img
                   src={defaultImg}
+                  className="bookImage"
                   height='60%'
                   width='60%'
                   alt='Book Image'
